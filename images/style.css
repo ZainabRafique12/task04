@@ -136,6 +136,7 @@ header {
 }
 .left-container {
     flex: 1 1 250px;
+    width: 100%;
 }
 .right-container {
     flex: 0 0 auto;
@@ -422,6 +423,21 @@ header {
 /* Right Sidebar */
 .sidebar-right {
     order: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    gap: 10px;
+}
+.sidebar-right button {
+    background-color: #A52A2A; /* Brown/Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .cta1,
 .cta2,
@@ -507,7 +523,6 @@ header {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-   
 }
 @media (min-width: 1024px) {
     .rm {
@@ -528,6 +543,7 @@ header {
         flex: 1 1 50%;
     }
     .container6 {
+        display: grid;
         grid-template-columns: 250px 1fr 280px;
     }
     .sidebar-right {
@@ -541,7 +557,7 @@ header {
         display: block;
         border-left: 2px solid rgb(180, 179, 179);
         height: auto;
-        min-height: 365px;
+        min-height: 100%;
         margin: 0 20px;
     }
     .navbar a {
@@ -597,5 +613,67 @@ header {
     .main-content,
     .bts {
         flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1023px) {
+    .sidebar-right {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px;
+        align-items: start;
+        padding: 20px;
+    }
+
+    .ch {
+        grid-column: 1;
+    }
+
+    .footbadges {
+        grid-column: 2;
+        margin-top: 140px;
+    }
+ .social-section {
+    align-items: center;
+        grid-column: 2;
+    }
+    .badges, .badges2, .social-heading h4 {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 524px) {
+    .right-container img {
+        max-width: 150px; 
+        height: auto;
+        display: block;
+        margin: 0 auto; 
+    }
+
+    .right-container {
+      
+        margin-bottom: 10px; 
+        position: relative;
+        bottom: 0; 
+        text-align: right; 
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
     }
 }
