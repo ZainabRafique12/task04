@@ -632,6 +632,9 @@ header {
     .footbadges {
         grid-column: 2;
         margin-top: 140px;
+        margin-left: 90px;
+        align-items: center;
+        justify-content: center;
     }
  .social-section {
     align-items: center;
